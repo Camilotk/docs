@@ -1,0 +1,254 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Hello World in F# - Teika Docs</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="favicon.svg">
+                        <link rel="shortcut icon" href="favicon.png">
+                <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+                <link rel="stylesheet" href="css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Hello World in F#</a></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">Teika Docs</h1>
+
+                    <div class="right-buttons">
+                                                <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="hello-world"><a class="header" href="#hello-world">Hello World</a></h2>
+<p>The first program that anyone will always do first when starting to learn a new programming language is a program that prints &quot;hello world&quot; in a terminal. We'll do that for practice, to get used to the language and environment.</p>
+<h2 id="what-you-will-need-for-this"><a class="header" href="#what-you-will-need-for-this">What you will need for this?</a></h2>
+<ul>
+<li>F# installed on your machine, if you don't have it yet, <a href="https://learn.microsoft.com/en-us/dotnet/core/install/">this link</a> will help you.</li>
+<li>A UTF-8 compatible text editor for you to edit the code, if you don't have any preference we recommend <a href="https://code.visualstudio.com/download">Visual Studio Code</a>.</li>
+<li>Know how to use the terminal in your operating system, and how to navigate around it.</li>
+</ul>
+<h2 id="create-the-project"><a class="header" href="#create-the-project">Create the project</a></h2>
+<p>We will create a console project to do this. To do it we will enter to the folder in our terminal where we want to create this project and enter the command.</p>
+<pre><code>&gt; dotnet new console -lang F# -o Hello
+</code></pre>
+<blockquote>
+<p>The <code>&gt;</code> marker is to indicate that this command should be run on terminal. It's the same as <code>$</code> for Linux and Mac. </p>
+</blockquote>
+<p>This will create a folder &quot;Hello&quot; with our main project. Inside this folder we will have two files:</p>
+<ul>
+<li><strong>Hello.fsproj</strong>: That contains the project configuration.</li>
+<li><strong>Program.fs</strong>: That contains our F# code.</li>
+</ul>
+<p>If we open the &quot;Program.fs&quot; file we will see:</p>
+<pre><code class="language-F#">// For more information see https://aka.ms/fsharp-console-apps
+printfn &quot;Hello from F#&quot;
+</code></pre>
+<p>And that's the code that prints &quot;Hello from F#&quot; in console! The &quot;Hello World&quot; program is also the example of code of every new F# project.</p>
+<h3 id="understanding-this-code"><a class="header" href="#understanding-this-code">Understanding this code</a></h3>
+<p>The first line is a comment, which means that the rest of the code in the line will not be executed. Any code in a line starting with  <code>//</code> or between <code>(* ... *)</code> is ignored and not executed. We use it to add information about the code for other programmers that will eventually work in this code. In this case, a message from Microsoft about where we can find more information about console apps.</p>
+<p>The second line starts with a function. For now, you can think of it as &quot;commands&quot; as we'll see it next. The <code>printfn</code> function receives a message in String (any text between <code>&quot;...&quot;</code>) and prints it in console.</p>
+<h3 id="changing-the-program"><a class="header" href="#changing-the-program">Changing the program</a></h3>
+<p>As we don't need the comment since it will not be executed, we can just delete this line. And, as we want to print &quot;Hello World&quot; and not &quot;Hello from F#!&quot;, we can change the value to get what we want.</p>
+<p>Change <strong>Program.fs</strong> to:</p>
+<pre><code class="language-F#">printfn &quot;Hello World&quot;
+</code></pre>
+<h2 id="compiling-the-project"><a class="header" href="#compiling-the-project">Compiling the project</a></h2>
+<p>After changing the message and before we execute our program, we have to compile it. You can think of compilation as the process that translates your code into code that the computer understands. To do this, just run the command in your terminal:</p>
+<pre><code>&gt; dotnet build
+</code></pre>
+<p><strong>For linux users:</strong></p>
+<details>
+Add to your .bashrc the flag `export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1` in case of some error at build process.
+</details>
+<h2 id="run-the-project"><a class="header" href="#run-the-project">Run the project</a></h2>
+<p>Now we can run the project, for do it just enter in your terminal the command:</p>
+<pre><code>&gt; dotnet run
+</code></pre>
+<p>And you should see &quot;Hello World&quot; printed in your terminal.</p>
+<p><strong>Congratulations!</strong> You done your first F# program.</p>
+<h2 id="going-to-the-next-level"><a class="header" href="#going-to-the-next-level">Going to the next level</a></h2>
+<p>We did the &quot;Hello World&quot; program, but now we can upgrade it to display &quot;Hello&quot; for any value so it would work with &quot;from F#&quot; or &quot;World&quot; as we want. To do this we will change the <code>printfn</code> function to print formatted text passing a specifier that will be replaced for the message we want.</p>
+<p>So we'll change our <strong>Program.fs</strong> to:</p>
+<pre><code class="language-F#">printfn &quot;Hello %s&quot; &quot;World&quot;
+</code></pre>
+<p>And then build and run it again!</p>
+<p>Now if we want &quot;from F#&quot; instead &quot;World&quot; we can change to:</p>
+<pre><code class="language-F#">printfn &quot;Hello %s&quot; &quot;from F#&quot;
+</code></pre>
+<p>Now, if we build and run again, we should see the original message.</p>
+<h3 id="a-taste-of-a-statically-typed-language"><a class="header" href="#a-taste-of-a-statically-typed-language">A taste of a statically typed language</a></h3>
+<p>F# is different from how some other languages works with Types. This means that each piece of information has to be from the expected type in order to work. For example, the <code>%s</code> specifier expects a <code>String</code> type (a message between <code>&quot;...&quot;</code>) if we try to pass a number, for example <code>42</code>, we will get an error.</p>
+<p>Try doing this, passing 42 as the message:</p>
+<pre><code class="language-F#">printfn &quot;Hello %s&quot; 42
+</code></pre>
+<p>If you try to build this program, you'll get the error:</p>
+<pre><code>error FS0001: This expression was expected to have type    
+'string'    
+but here has type    
+'int' [.../Hello/Hello.fsproj]
+</code></pre>
+<p>The error message is telling us that we should pass a &quot;String&quot; for this function, but we're passing an &quot;int&quot; (an &quot;Integer&quot; number). Our program didn't even produce a new build. We will only be able to execute the code when we fix it by passing the correct value.</p>
+<p>This will help us to avoid mistakes and errors in our programs. By checking all our errors and enforcing each command to receive the correct parameters, F# will help us to write programs that have less bugs and errors.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>
