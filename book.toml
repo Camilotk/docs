@@ -1,0 +1,6 @@
+[book]
+authors = ["Camilo Cunha de Azevedo"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Teika Docs"
