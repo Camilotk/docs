@@ -29,4 +29,4 @@ Bugs in the content should be reported in the [issues](#).
 
 Bugs in the toolset should be reported to the tools themselves.
 
-If you want to help the Documentation Team, you are always welcome. Just send a message on Setas Discord.
+If you want to help the Documentation Team, you are always welcome. Just send a message on [#teika](https://discord.com/channels/904815072906448896/1043897782479626321) Setas Discord.
