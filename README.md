@@ -25,7 +25,7 @@ $ mdbook build
 
 ## Contibuting
 
-Bugs in the content should be reported in the [issues](#).
+Bugs in the content should be reported in the [issues](https://github.com/Camilotk/docs/issues).
 
 Bugs in the toolset should be reported to the tools themselves.
 
