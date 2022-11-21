@@ -1,6 +1,6 @@
 # Teika documentation repository
 
-This repository contains the source code, markdown content and hosts the documentation for Teika Programming language. If you want to access the content [click here](#). If you want, you can dowload the builded static version from gh-pages branch.
+This repository contains the source code, markdown content and hosts the documentation for Teika Programming language. If you want to access the content [click here](https://github.com/Camilotk/docs/tree/gh-pages). If you want, you can dowload the builded static version from gh-pages branch.
 
 Documentation on authoring Teika documentation, including information about both style and markup, is available [here](#).
 
